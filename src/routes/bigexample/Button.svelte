@@ -2,9 +2,10 @@
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 	import LoadingSpinner from './LoadingSpinner.svelte';
 
-	type ButtonProps = { children?: () => any; loading?: boolean } & HTMLButtonAttributes;
+    prop { type = 'button', ...btnAttrs }: HTMLButtonAttributes = {}
+    prop loading: boolean = false;
 
-	let { children = undefined, loading = false, type = 'button', ...btnAttrs } = $props<ButtonProps>();
+    slot children()
 </script>
 
 <button
@@ -16,8 +17,11 @@
 		<LoadingSpinner class="w-5" />
 	{/if}
 	<div>
-		{#if children}
-			{@render children()}
-		{/if}
+        <svelte:slot>
+            No Content
+        </svelte:slot>
 	</div>
+    <svelte:slot name="trailing" {loading}>
+        <!-- No content -->
+    </svelte:slot>
 </button>

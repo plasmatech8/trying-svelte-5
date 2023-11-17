@@ -1,7 +1,7 @@
 <script lang="ts" runes>
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	let { ...props } = $props<HTMLAttributes<HTMLDivElement>>();
+	prop { ...props }: HTMLAttributes<HTMLDivElement>;
 </script>
 
 <div role="status" {...props}>

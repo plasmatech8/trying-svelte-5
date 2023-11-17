@@ -1,12 +1,12 @@
 <script runes lang="ts">
-	import Button from './Button.svelte';
-	import FitnessStats from './FitnessStats.svelte';
-	import { FitnessTrackerStore } from './stores.svelte';
+	import Button from './Button.svelte' ;
+	import FitnessStats from './FitnessStats.svelte' ;
+	import { FitnessTrackerStore } from './stores.svelte' ;
 
 	const tracker = new FitnessTrackerStore();
 
-	let loading = $state(false);
-	let lastTimer = $state<number | undefined>();
+	state loading = false;
+	state lastTimer: number | undefined;
 
 	function handleClick() {
 		loading = true;
