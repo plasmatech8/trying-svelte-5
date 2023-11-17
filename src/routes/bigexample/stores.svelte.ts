@@ -9,7 +9,6 @@ export class FitnessTrackerStore {
 		return this._stepsTaken;
 	}
 	incrementSteps() {
-		console.log('!!!');
 		this._stepsTaken += 1;
 	}
 }

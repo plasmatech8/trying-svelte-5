@@ -9,7 +9,7 @@
 		<tr>
 			<td>Steps</td>
 			<td>{fitTracker.stepsTaken}</td>
-			<td><button onclick={() => fitTracker.incrementSteps()}>Take Step</button></td>
+			<td><button  class="bg-blue-100 hover:bg-blue-200 active:scale-95 px-1 rounded font-semibold" onclick={() => fitTracker.incrementSteps()}>Take Step</button></td>
 		</tr>
 		<tr>
 			<td>Intensity</td>
@@ -21,7 +21,6 @@
 					min="0.5"
 					max="1.5"
 					step="0.1"
-					on:click|stopPropagation
 				/></td
 			>
 		</tr>
