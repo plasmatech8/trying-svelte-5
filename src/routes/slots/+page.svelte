@@ -6,7 +6,7 @@
 
 <SlotComponent>
     {#snippet children()}
-	    Foo bar baz. This is default content slot.
+	    Foo bar baz. This is default slot.
     {/snippet}
 
 	{#snippet custom(msg)}
