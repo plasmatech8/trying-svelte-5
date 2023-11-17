@@ -5,11 +5,9 @@
 <h1>Slots</h1>
 
 <SlotComponent>
-    {#snippet children()}
-	    Foo bar baz. This is default slot.
-    {/snippet}
+	Foo bar baz. This is default slot.
 
-	{#snippet custom(msg)}
+	<svelte:slot-content name="custom">
 		Hello Custom Snippet!? {msg}
-	{/snippet}
+    </svelte:slot-content>
 </SlotComponent>

@@ -29,8 +29,8 @@
 			get intensityLevel() {
 				return intensityLevel;
 			},
-			set intensityLevel(v) {
-				intensityLevel = v;
+			set intensityLevel(value) {
+				intensityLevel = value;
 			}
 		};
 	}
