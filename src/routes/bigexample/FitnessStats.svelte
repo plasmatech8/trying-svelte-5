@@ -1,7 +1,7 @@
 <script runes lang="ts">
 	import type { FitnessTrackerStore } from './stores.svelte';
 
-	let { fitTracker } = $props<{ fitTracker: FitnessTrackerStore }>();
+    prop fitTracker: FitnessTrackerStore
 </script>
 
 <table class="outline outline-gray-200 rounded">

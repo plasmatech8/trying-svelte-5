@@ -1,14 +1,13 @@
-// Note: I prefer function-object stores slightly more
 
-export class FitnessTrackerStore {
-	_stepsTaken = $state(0); // read/increment
-	intensityLevel = $state(1); // read/write
-	caloriesBurned = $derived(this._stepsTaken * this.intensityLevel * 0.04); // read-only
+function createFitnessTrackerStore() {
+	state stepsTaken = 0; // read/increment
+	state intensityLevel = 1; // read/write
+	derived caloriesBurned = stepsTaken * intensityLevel * 0.04; // read-only
 
-	get stepsTaken() {
-		return this._stepsTaken;
-	}
-	incrementSteps() {
-		this._stepsTaken += 1;
-	}
+	return {
+		get stepsTaken,
+		incrementSteps: () => (stepsTaken += 1),
+		get caloriesBurned,
+		intensityLevel
+	};
 }
