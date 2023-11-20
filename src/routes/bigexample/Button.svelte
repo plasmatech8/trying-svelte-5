@@ -5,7 +5,6 @@
 	let { type = 'button', ...btnAttrs } = $prop.group<HTMLButtonAttributes>();
 	let loading = $prop(false);
 
-
 </script>
 
 <button
@@ -15,7 +14,7 @@
 	on:*
 >
 	<!-- ^^^ alt: on:click,mouseover,mousedown,mouseenter -->
-	<!-- ^^^ alt: on:buttonEvents -->
+	<!-- ^^^ alt: on:buttonEvents (array) -->
 	{#if loading}
 		<LoadingSpinner class="w-5" />
 	{/if}
