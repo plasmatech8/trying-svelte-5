@@ -7,7 +7,7 @@
 <SlotComponent>
 	Foo bar baz. This is default slot.
 
-	<svelte:slot-content name="custom">
+	<svelte:slot-content into="custom">
 		Hello Custom Snippet!? {msg}
     </svelte:slot-content>
 </SlotComponent>
